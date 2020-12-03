@@ -159,7 +159,7 @@ info.onCountdownEnd(function () {
             . . . . . . 2 2 2 2 . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.chase)
+            `, SpriteKind.Food)
         bad.follow(Car, 70)
     } else if (enemy_sprite == 2) {
         bad = sprites.create(img`
@@ -179,7 +179,7 @@ info.onCountdownEnd(function () {
             . . . . . . 4 c c 4 . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.chase)
+            `, SpriteKind.Food)
         bad.follow(Car, 65)
     } else if (enemy_sprite == 3) {
         bad = sprites.create(img`
@@ -199,7 +199,7 @@ info.onCountdownEnd(function () {
             . . . . . . b b b b . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.chase)
+            `, SpriteKind.Food)
         bad.follow(Car, 80)
     } else {
         bad = sprites.create(img`
@@ -219,7 +219,7 @@ info.onCountdownEnd(function () {
             . . . . . . . 6 6 . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.chase)
+            `, SpriteKind.Food)
         bad.follow(Car, 75)
     }
     enemy_var = randint(1, 4)
@@ -392,7 +392,7 @@ Crate = sprites.create(img`
     . . e e e e e e e e e e e e . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Food)
-tiles.setTilemap(tiles.createTilemap(hex`100010000000000f100d000000000d0f1000000e000a0709060707070707070906070c000d0103050505050b03050505050b020d000102000d000001020e00000d010200000102000a0707090607070c000102000d01020d0103050b03050b02000102000001020d01020e01020001020d0102000e01020001020e01020d01020001020d000106070906070906070906070902000d0103050b03050505050b03050b020e0001020e0102001817000102000102001109020d01020015160d01020d010611120b020d010200131400010200010312000106070906070906070906070902000d04050505050505050505050505080d00000e000000000000000e00000d000e`, img`
+tiles.setTilemap(tiles.createTilemap(hex`100010000000000f100d000000000d0f1000000e000a0709060707070707070906070c000d0103050505050b03050505050b020d000102000d000001020e00000d010200000102000a0707090607070c000102000d01020d0103050b03050b02000102000001020d01020e01020001020d0102000e01020001020e01020d01020001020d000106070906070906070906070902000d0103050b03050505050b03050b020e0001020e0102001817000102000102001109020d01020015160d01020d010607120b020d010200131400010200010305000106070906070906070906070902000d04050505050505050505050505080d00000e000000000000000e00000d000e`, img`
     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
     2 . . . . . . . . . . . . . . 2 
     2 . . . . . . . . . . . . . . 2 
@@ -404,8 +404,8 @@ tiles.setTilemap(tiles.createTilemap(hex`100010000000000f100d000000000d0f1000000
     2 . . . . . . . . . . . . . . 2 
     2 . . . . . . . . . . . . . . 2 
     2 . . 2 . . 2 2 2 2 . . 2 . . 2 
-    2 . . 2 . . 2 2 2 2 . . 2 . . 2 
-    2 . . 2 . . 2 . . 2 . . 2 . . 2 
+    2 . . 2 . . 2 2 2 2 . . 2 . . . 
+    2 . . 2 . . 2 . . 2 . . 2 . . . 
     2 . . . . . . . . . . . . . . 2 
     2 . . . . . . . . . . . . . . 2 
     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
@@ -695,6 +695,5 @@ forever(function () {
     }
 })
 forever(function () {
-    music.playMelody("E B A G E G F - ", 250)
-    music.playMelody("E B G F D F B A ", 250)
+    music.playMelody("C D E A G G G G ", 50)
 })
